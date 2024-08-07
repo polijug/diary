@@ -818,6 +818,7 @@ public class FileUtils
         // The MIME data type filter
         intent.setType("*/*");
         // Only return URIs that can be opened with ContentResolver
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         return intent;
     }
